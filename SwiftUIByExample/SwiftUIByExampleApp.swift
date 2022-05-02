@@ -10,11 +10,15 @@ import SwiftUI
 
 @main
 struct SwiftUIByExampleApp: App {
+    
+    @StateObject var viewRouter = ViewRouter()
+    
     var body: some Scene {
         WindowGroup {
             let userSetting = UserSetting()
             ContentView()
                 .environmentObject(userSetting)
+                .environmentObject(viewRouter)
         }
     }
 }

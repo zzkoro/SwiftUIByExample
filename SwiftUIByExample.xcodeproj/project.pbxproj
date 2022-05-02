@@ -10,6 +10,13 @@
 		518EAA99264EE37A00B057E5 /* SwiftUIByExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518EAA98264EE37A00B057E5 /* SwiftUIByExampleApp.swift */; };
 		518EAA9B264EE37A00B057E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518EAA9A264EE37A00B057E5 /* ContentView.swift */; };
 		518EAA9D264EE37B00B057E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 518EAA9C264EE37B00B057E5 /* Assets.xcassets */; };
+		6301F1F9281CF885001E4CAD /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6301F1F8281CF885001E4CAD /* ProductsViewModel.swift */; };
+		6301F1FE281CFA06001E4CAD /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6301F1FD281CFA06001E4CAD /* Product.swift */; };
+		6301F200281CFAA7001E4CAD /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6301F1FF281CFAA7001E4CAD /* ProductService.swift */; };
+		6301F203281D2A79001E4CAD /* LogStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6301F202281D2A79001E4CAD /* LogStore.swift */; };
+		6301F206281D31E3001E4CAD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6301F205281D31E3001E4CAD /* SettingsView.swift */; };
+		6301F208281D7642001E4CAD /* MultipleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6301F207281D7642001E4CAD /* MultipleButtonView.swift */; };
+		6301F20A281D875F001E4CAD /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6301F209281D875F001E4CAD /* ViewRouter.swift */; };
 		63C7391427A624FB009D0022 /* MyScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C7391327A624FB009D0022 /* MyScoreView.swift */; };
 		63C7391627A62678009D0022 /* UserSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C7391527A62678009D0022 /* UserSetting.swift */; };
 /* End PBXBuildFile section */
@@ -20,6 +27,13 @@
 		518EAA9A264EE37A00B057E5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		518EAA9C264EE37B00B057E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		518EAAA1264EE37B00B057E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6301F1F8281CF885001E4CAD /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
+		6301F1FD281CFA06001E4CAD /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		6301F1FF281CFAA7001E4CAD /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
+		6301F202281D2A79001E4CAD /* LogStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogStore.swift; sourceTree = "<group>"; };
+		6301F205281D31E3001E4CAD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		6301F207281D7642001E4CAD /* MultipleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleButtonView.swift; sourceTree = "<group>"; };
+		6301F209281D875F001E4CAD /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		63C7391327A624FB009D0022 /* MyScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScoreView.swift; sourceTree = "<group>"; };
 		63C7391527A62678009D0022 /* UserSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSetting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,6 +68,11 @@
 		518EAA97264EE37A00B057E5 /* SwiftUIByExample */ = {
 			isa = PBXGroup;
 			children = (
+				6301F1FC281CF9F8001E4CAD /* Model */,
+				6301F201281D2A67001E4CAD /* Util */,
+				6301F1FA281CF9E5001E4CAD /* Service */,
+				6301F204281D31D5001E4CAD /* View */,
+				6301F1F7281CF873001E4CAD /* ViewModel */,
 				518EAA98264EE37A00B057E5 /* SwiftUIByExampleApp.swift */,
 				518EAA9A264EE37A00B057E5 /* ContentView.swift */,
 				518EAA9C264EE37B00B057E5 /* Assets.xcassets */,
@@ -62,6 +81,48 @@
 				63C7391527A62678009D0022 /* UserSetting.swift */,
 			);
 			path = SwiftUIByExample;
+			sourceTree = "<group>";
+		};
+		6301F1F7281CF873001E4CAD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6301F1F8281CF885001E4CAD /* ProductsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6301F1FA281CF9E5001E4CAD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				6301F1FF281CFAA7001E4CAD /* ProductService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		6301F1FC281CF9F8001E4CAD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6301F1FD281CFA06001E4CAD /* Product.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6301F201281D2A67001E4CAD /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				6301F202281D2A79001E4CAD /* LogStore.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		6301F204281D31D5001E4CAD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6301F205281D31E3001E4CAD /* SettingsView.swift */,
+				6301F207281D7642001E4CAD /* MultipleButtonView.swift */,
+				6301F209281D875F001E4CAD /* ViewRouter.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,10 +193,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6301F203281D2A79001E4CAD /* LogStore.swift in Sources */,
 				63C7391427A624FB009D0022 /* MyScoreView.swift in Sources */,
 				63C7391627A62678009D0022 /* UserSetting.swift in Sources */,
+				6301F206281D31E3001E4CAD /* SettingsView.swift in Sources */,
 				518EAA9B264EE37A00B057E5 /* ContentView.swift in Sources */,
+				6301F1F9281CF885001E4CAD /* ProductsViewModel.swift in Sources */,
 				518EAA99264EE37A00B057E5 /* SwiftUIByExampleApp.swift in Sources */,
+				6301F20A281D875F001E4CAD /* ViewRouter.swift in Sources */,
+				6301F200281CFAA7001E4CAD /* ProductService.swift in Sources */,
+				6301F208281D7642001E4CAD /* MultipleButtonView.swift in Sources */,
+				6301F1FE281CFA06001E4CAD /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,14 +332,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 8HCLDZV5B7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftUIByExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hackingwithswift.SwiftUIByExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jipps.SwiftUIByExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -284,14 +352,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 8HCLDZV5B7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftUIByExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hackingwithswift.SwiftUIByExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jipps.SwiftUIByExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

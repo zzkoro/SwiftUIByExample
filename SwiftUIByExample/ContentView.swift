@@ -26,9 +26,12 @@ struct InnerView: View {
 struct ContentView: View {
     @StateObject var progress = UserProgress()
 //    @ObservedObject var progress = UserProgress()
+    @EnvironmentObject var viewRouter: ViewRouter
     
     var body: some View {
-        NavigationView {
+        switch viewRouter.currentPage {
+        case .page1:
+            NavigationView {
             List {
                 Text("Hello, world!")
                     .font(.largeTitle)
@@ -41,12 +44,25 @@ struct ContentView: View {
                     .background(.green)
 
             
-            Text("Your score is \(progress.score)")
-            InnerView(progress: progress)
+                Text("Your score is \(progress.score)")
+                InnerView(progress: progress)
 //                Spacer()
+
+//                NavigationLink(destination: MultipleButtonView()) {
+//                    Text("MultipleButton 예제")
+//                }
+                
+                Button("MultipleButton 예제") {
+                    viewRouter.currentPage = .page2
+                }
+
             }
             .navigationTitle("FriendFace")
 //            .navigationViewStyle(.stack)
+        }
+        case .page2:
+            MultipleButtonView()
+                .transition(.scale)
         }
         
     }
@@ -69,7 +85,7 @@ struct ContentView2: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         if #available(iOS 15.0, *) {
-            ContentView()
+            ContentView().environmentObject(ViewRouter())
                 .previewInterfaceOrientation(.portraitUpsideDown)
         } else {
             // Fallback on earlier versions

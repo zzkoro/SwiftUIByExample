@@ -37,7 +37,7 @@ struct MultipleButtonView: View {
             
             Button(action: {
                 withAnimation {
-                    viewRouter.currentPage = .page1
+                    viewRouter.currentPage = .main
                 }
                 
             }, label: {

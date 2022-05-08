@@ -1,0 +1,73 @@
+//
+//  Screen3NameEmail.swift
+//  SwiftUIByExample
+//
+//  Created by junemp on 2022/05/07.
+//
+
+import SwiftUI
+import Combine
+
+final class Screen3NameEmailVM: ObservableObject, Completeable {
+    @Published var name = ""
+    @Published var personalEmail = ""
+    
+    let didComplete = PassthroughSubject<Screen3NameEmailVM, Never>()
+    let skipRequested = PassthroughSubject<Screen3NameEmailVM, Never>()
+    
+    init(name: String?, personalEmail: String?) {
+        self.name = name ?? ""
+        self.personalEmail = personalEmail ?? ""
+    }
+    
+    func didTapNext() {
+        didComplete.send(self)
+    }
+    
+    fileprivate func didTapSkip() {
+        skipRequested.send(self)
+    }
+}
+
+struct Screen3NameEmail: View {
+    @Environment(\.dismiss) var dismiss
+    
+    @StateObject var vm: Screen3NameEmailVM
+    
+    var body: some View {
+        VStack(alignment: .center) {
+            Text("3: Enter personal details")
+            TextField("Name", text: $vm.name)
+            TextField("Personal Email", text: $vm.personalEmail)
+            Spacer()
+                .frame(height: 12)
+            Button(action: {
+                self.vm.didTapNext()
+            }, label: { Text("Enter Company Info") })
+            Button(action: {
+                self.vm.didTapSkip()
+            }, label: { Text("Skip") })
+            Spacer()
+        }.padding()
+        .navigationBarBackButtonHidden(true)
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button (action: {
+                    print("toolbar button clicked")
+                    dismiss()
+                }) {
+                    Text("\(Image(systemName: "chevron.left"))")
+                }
+            }
+
+        }
+    }
+}
+
+struct Screen3NameEmail_Previews: PreviewProvider {
+    static var previews: some View {
+        let vm = Screen3NameEmailVM(name: "", personalEmail: "")
+        Screen3NameEmail(vm: vm)
+    }
+}

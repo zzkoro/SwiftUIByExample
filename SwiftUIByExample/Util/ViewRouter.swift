@@ -9,10 +9,11 @@ import Foundation
 import SwiftUI
 
 enum Page {
-    case page1
+    case main
     case page2
+    case page3
 }
 
 class ViewRouter: ObservableObject {
-    @Published var currentPage: Page = .page1
+    @Published var currentPage: Page = .main
 }

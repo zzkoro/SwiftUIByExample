@@ -30,7 +30,7 @@ struct ContentView: View {
     
     var body: some View {
         switch viewRouter.currentPage {
-        case .page1:
+        case .main:
             NavigationView {
             List {
                 Text("Hello, world!")
@@ -55,7 +55,10 @@ struct ContentView: View {
                 Button("MultipleButton 예제") {
                     viewRouter.currentPage = .page2
                 }
-
+                
+                Button("Flow 예제") {
+                    viewRouter.currentPage = .page3
+                }
             }
             .navigationTitle("FriendFace")
 //            .navigationViewStyle(.stack)
@@ -63,6 +66,9 @@ struct ContentView: View {
         case .page2:
             MultipleButtonView()
                 .transition(.scale)
+        case .page3:
+            let vm = FlowVM()
+            FlowView(vm: vm)
         }
         
     }

@@ -12,6 +12,7 @@ enum Page {
     case main
     case page2
     case page3
+    case page4
 }
 
 class ViewRouter: ObservableObject {

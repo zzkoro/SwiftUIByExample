@@ -20,6 +20,7 @@
 		630B76412826C56F00032C5B /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630B76402826C56F00032C5B /* Flow.swift */; };
 		630B76432826C8AD00032C5B /* FlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630B76422826C8AD00032C5B /* FlowView.swift */; };
 		630B76452827603500032C5B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 630B76442827603500032C5B /* README.md */; };
+		630B7648282886E900032C5B /* StepperAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630B7647282886E900032C5B /* StepperAnimationView.swift */; };
 		63C7391427A624FB009D0022 /* MyScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C7391327A624FB009D0022 /* MyScoreView.swift */; };
 		63C7391627A62678009D0022 /* UserSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C7391527A62678009D0022 /* UserSetting.swift */; };
 		63F6A6EB2826B40400EB88B9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F6A6EA2826B40400EB88B9 /* Model.swift */; };
@@ -47,6 +48,7 @@
 		630B76402826C56F00032C5B /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 		630B76422826C8AD00032C5B /* FlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowView.swift; sourceTree = "<group>"; };
 		630B76442827603500032C5B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		630B7647282886E900032C5B /* StepperAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperAnimationView.swift; sourceTree = "<group>"; };
 		63C7391327A624FB009D0022 /* MyScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScoreView.swift; sourceTree = "<group>"; };
 		63C7391527A62678009D0022 /* UserSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSetting.swift; sourceTree = "<group>"; };
 		63F6A6EA2826B40400EB88B9 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		518EAA97264EE37A00B057E5 /* SwiftUIByExample */ = {
 			isa = PBXGroup;
 			children = (
+				630B7646282886C700032C5B /* Animation */,
 				63F6A6E92826B3C800EB88B9 /* NavigationFlow */,
 				6301F1FC281CF9F8001E4CAD /* Model */,
 				6301F201281D2A67001E4CAD /* Util */,
@@ -145,6 +148,14 @@
 				6301F207281D7642001E4CAD /* MultipleButtonView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		630B7646282886C700032C5B /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				630B7647282886E900032C5B /* StepperAnimationView.swift */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 		63F6A6E92826B3C800EB88B9 /* NavigationFlow */ = {
@@ -249,6 +260,7 @@
 				6301F20A281D875F001E4CAD /* ViewRouter.swift in Sources */,
 				63F6A6F52826BD6900EB88B9 /* Screen4CompanyInfo.swift in Sources */,
 				6301F200281CFAA7001E4CAD /* ProductService.swift in Sources */,
+				630B7648282886E900032C5B /* StepperAnimationView.swift in Sources */,
 				63F6A6F32826BA4300EB88B9 /* Screen3NameEmail.swift in Sources */,
 				6301F208281D7642001E4CAD /* MultipleButtonView.swift in Sources */,
 				6301F1FE281CFA06001E4CAD /* Product.swift in Sources */,
@@ -309,7 +321,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -364,7 +376,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

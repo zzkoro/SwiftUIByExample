@@ -59,6 +59,10 @@ struct ContentView: View {
                 Button("Flow 예제") {
                     viewRouter.currentPage = .page3
                 }
+                
+                Button("Export Log Data") {
+                    viewRouter.currentPage = .page4
+                }
             }
             .navigationTitle("FriendFace")
 //            .navigationViewStyle(.stack)
@@ -69,6 +73,18 @@ struct ContentView: View {
         case .page3:
             let vm = FlowVM()
             FlowView(vm: vm)
+        case .page4:
+            var logStore: LogStore = LogStore()
+            VStack {
+                HStack {
+                    Button("<") {
+                        viewRouter.currentPage = .main
+                    }
+                    .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
+                    Spacer()
+                }
+                SettingsView(logs: logStore)
+            }
         }
         
     }

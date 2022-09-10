@@ -27,6 +27,7 @@ struct ContentView: View {
     @StateObject var progress = UserProgress()
 //    @ObservedObject var progress = UserProgress()
     @EnvironmentObject var viewRouter: ViewRouter
+    @State private var showSheet = false
     
     var body: some View {
         switch viewRouter.currentPage {
@@ -62,6 +63,14 @@ struct ContentView: View {
                 
                 Button("Export Log Data") {
                     viewRouter.currentPage = .page4
+                }
+                
+                Button("Show Bottom Sheet") {
+                    showSheet.toggle()
+                }
+                .buttonStyle(.borderedProminent)
+                .sheet(isPresented: $showSheet) {
+                    Text("This is the expandable bottom sheet.")
                 }
             }
             .navigationTitle("FriendFace")
